@@ -1,6 +1,8 @@
 body {
   background-color: rgb(154, 178, 202);
   font-family: monospace;
+  background-size: cover;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/612/original/new_year_clock_background_1609.jpg?1702854522);
 }
 
 select {
@@ -15,12 +17,13 @@ select {
 
 .container {
   display: block;
-  background-color: rgb(218, 228, 239);
+  background-color: rgb(62, 84, 107);
   margin: 60px auto;
   padding: 20px 35px;
   max-width: 600px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  color: whitesmoke;
 }
 
 h1 {
@@ -38,7 +41,7 @@ h2 {
   justify-content: space-between;
   margin: 20px 5px;
   padding: 20px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+  border-bottom: 1px dashed whitesmoke;
 }
 
 .city:last-child {

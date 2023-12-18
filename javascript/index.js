@@ -4,7 +4,7 @@ function updateTime() {
   let denverTimeElement = denverElement.querySelector(".time");
   let denverTime = moment().tz("America/Denver");
 
-  denverDateElement.innerHTML = denverTime.format("MMM Do YYYY");
+  denverDateElement.innerHTML = denverTime.format("MMMM Do YYYY");
   denverTimeElement.innerHTML = denverTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
@@ -14,7 +14,7 @@ function updateTime() {
   let viennaTimeElement = viennaElement.querySelector(".time");
   let viennaTime = moment().tz("Europe/Vienna");
 
-  viennaDateElement.innerHTML = viennaTime.format("MMM Do YYYY");
+  viennaDateElement.innerHTML = viennaTime.format("MMMM Do YYYY");
   viennaTimeElement.innerHTML = viennaTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
