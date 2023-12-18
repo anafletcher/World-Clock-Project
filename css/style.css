@@ -18,9 +18,9 @@ select {
 .container {
   display: block;
   background-color: rgb(62, 84, 107);
-  margin: 60px auto;
+  margin: 140px auto;
   padding: 20px 35px;
-  max-width: 600px;
+  max-width: 500px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   color: rgb(236, 231, 223);
@@ -28,7 +28,7 @@ select {
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 38px;
 }
 
 h2 {

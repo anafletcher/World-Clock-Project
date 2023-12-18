@@ -1,27 +1,28 @@
 function updateTime() {
-  let denverElement = document.querySelector("#denver");
-  let denverDateElement = denverElement.querySelector(".date");
-  let denverTimeElement = denverElement.querySelector(".time");
-  let denverTime = moment().tz("America/Denver");
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  let tokyoTime = moment().tz("Asia/Tokyo");
 
-  denverDateElement.innerHTML = denverTime.format("MMMM Do YYYY");
-  denverTimeElement.innerHTML = denverTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
+  tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+  tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
 
-  let viennaElement = document.querySelector("#vienna");
-  let viennaDateElement = viennaElement.querySelector(".date");
-  let viennaTimeElement = viennaElement.querySelector(".time");
-  let viennaTime = moment().tz("Europe/Vienna");
+  let zurichElement = document.querySelector("#zurich");
+  let zurichDateElement = zurichElement.querySelector(".date");
+  let zurichTimeElement = zurichElement.querySelector(".time");
+  let zurichTime = moment().tz("Europe/Zurich");
 
-  viennaDateElement.innerHTML = viennaTime.format("MMMM Do YYYY");
-  viennaTimeElement.innerHTML = viennaTime.format(
+  zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
+  zurichTimeElement.innerHTML = zurichTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
@@ -38,8 +39,8 @@ function updateCity(event) {
   `;
 }
 
-let citySelectElement = document.querySelector("#city");
-citySelectElement.addEventListener("change", updateCity);
-
 updateTime();
 setInterval(updateTime, 1000);
+
+let citySelectElement = document.querySelector("#city");
+citySelectElement.addEventListener("change", updateCity);
